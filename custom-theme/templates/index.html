@@ -39,7 +39,7 @@
 {% block articles_modal %}
 {% if articles %}
 {% for article in (articles_page.object_list if articles_page else articles) %}
-<div class="modal fade" id="article-modal-{{article.slug}}" tabindex="-1" role="dialog" aria-labelledby="article-label-{{article.title}}">
+<div class="modal fade" id="article-modal-{{article.slug}}" tabindex="-1" role="dialog" aria-labelledby="article-modal-{{article.slug}}">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -53,9 +53,7 @@
             <span>{{tag}}</span>
           {% endfor %}
         </div>
-        <p>
-          {{article.content}}
-        </p>
+        {{article.content}}
         <p>
           <a href="{{article.buyurl}}" target="_blank" class="btn btn-primary">Order your T-Shirt</a>
         </p>
