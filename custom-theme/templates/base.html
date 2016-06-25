@@ -48,7 +48,7 @@
     <p id="back-top">
       <a href="#top"><i class="fa fa-angle-up"></i></a>
     </p>
-    
+
     <footer>
       <div class="container text-center">
          <p>We call ourselves as<a href="http://mupulstees.com">
@@ -65,10 +65,21 @@
     <!-- Bootstrap core JavaScript
       ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="{{SITEURL}}/theme/js/bootstrap.min.js"></script>
     <script src="{{SITEURL}}/theme/js/SmoothScroll.js"></script>
     <script src="{{SITEURL}}/theme/js/theme-scripts.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        $("a.zoom-article").click(function(e){
+          e.preventDefault();
+          var target=$(this).data("target");
+          $(".modal#"+target).modal('show');
+        });
+      })
+    </script>
   </body>
 </html>
 

@@ -33,5 +33,11 @@ DEFAULT_PAGINATION = 6
 
 THEME = 'custom-theme'
 
+EXTRA_PATH_METADATA = {
+        'extras/CNAME': {'path': 'CNAME'},
+        'extras/robots.txt': {'path': 'robots.txt'},
+        'extras/favicon.ico': {'path': 'favicon.ico'},
+}
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

@@ -24,7 +24,7 @@
                 <figcaption>
                   <h2>{{article.title}}</h2>
                   <p>{{article.caption}}</p>
-                  <a href="#" data-toggle="modal" data-target="article-modal-{{article.slug}}">View more</a>
+                  <a href="#" data-toggle="modal" class='zoom-article' data-target="article-modal-{{article.slug}}">View more</a>
                 </figcaption>
               </figure>
             </div>
@@ -39,12 +39,12 @@
 {% block articles_modal %}
 {% if articles %}
 {% for article in (articles_page.object_list if articles_page else articles) %}
-<div class="modal fade" id="article-modal-{{article.slug}}" tabindex="-1" role="dialog" aria-labelledby="article-modal-{{article.slug}}">
+<div class="modal fade" id="article-modal-{{article.slug}}" tabindex="-1" role="dialog" aria-labelledby="article-label-{{article.slug}}">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="article-title-{{article.slug}}">{{article.title}}</h4>
+        <h4 class="modal-title" id="article-label-{{article.slug}}">{{article.title}}</h4>
       </div>
       <div class="modal-body">
         <img src="{{SITEURL}}{{article.image}}" alt="article-img-{{article.slug}}" class="img-responsive" />
