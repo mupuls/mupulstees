@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <title>Mupuls Tees - Wear that, what makes you happy.</title>
+    <!-- Bootstrap core CSS -->
+    <link href="{{ SITEURL }}/theme/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Custom styles for this template -->
+    <link href="{{SITEURL}}/theme/css/style.css" rel="stylesheet">
+
+    {% block socialgraph %}
+    <meta name="application-name" content="MupulsTees" />
+    <meta property="fb:app_id" content="1716569455259695" />
+    <meta name="application-url" content="" />
+    <meta property="og:site_name" content="MupulsTees"/>
+    <meta property="og:title" content="MupulsTees" />
+    <meta property="og:description" content="Wear a T-shirt, that makes you happy."/>
+    <meta property="og:image" content="{{ SITEURL }}/theme/images/logo.png" />
+    <meta property="og:url" content="{{ SITEURL }}/index.html"/>
+    <meta property="fb:admins" content="515324669"/>
+
+    <link rel="image_src" href="{{ SITEURL }}/theme/images/logo.png" />
+
+    <meta name="twitter:site" value="http://twitter.com/mupuls_tees" />
+    <meta name="twitter:url" value="{{ SITEURL }}/index.html"/>
+    <meta name="twitter:title" value="MupulsTees" />
+    <meta name="twitter:description" value="Wear a T-shirt, that makes you happy." />
+    <meta name="twitter:image" value="{{ SITEURL }}/theme/images/logo.png" />
+    {% endblock %}
+
+  </head>
+  <body id="page-top">
+    <!-- {% include 'facebook_init_js.html' %} -->
+    <!-- Navigation -->
+    {% include 'nav.html' %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% include 'contact_section.html' %}
+    <p id="back-top">
+      <a href="#top"><i class="fa fa-angle-up"></i></a>
+    </p>
+    
+    <footer>
+      <div class="container text-center">
+         <p>We call ourselves as<a href="http://mupulstees.com">
+         <span>Mupuls</span>Tees.com</a>
+         </p>
+      </div>
+    </footer>
+
+    {% block articles_modal %}
+    {% endblock %}
+
+    {% include 'google_analytics.html' %}
+
+    <!-- Bootstrap core JavaScript
+      ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="{{SITEURL}}/theme/js/bootstrap.min.js"></script>
+    <script src="{{SITEURL}}/theme/js/SmoothScroll.js"></script>
+    <script src="{{SITEURL}}/theme/js/theme-scripts.js"></script>
+  </body>
+</html>
+
